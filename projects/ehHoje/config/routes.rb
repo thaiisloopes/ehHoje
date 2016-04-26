@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'visitors#index'
   resources :logins
   resources :ideas
   # The priority is based upon order of creation: first created -> highest priority.
