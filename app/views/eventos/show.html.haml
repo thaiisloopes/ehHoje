@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Descricao:
+  = @evento.descricao
+%p
+  %b Data:
+  = @evento.data
+%p
+  %b Horario:
+  = @evento.horario
+%p
+  %b Local:
+  = @evento.local
+%p
+  %b Estabelecimento:
+  = @evento.Estabelecimento
+
+= link_to 'Edit', edit_evento_path(@evento)
+\|
+= link_to 'Back', eventos_path
