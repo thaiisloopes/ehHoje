@@ -1,0 +1,12 @@
+= simple_form_for(@estabelecimento) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :cnpj
+    = f.input :empresa
+    = f.input :email
+    = f.input :senha
+    = f.input :tipo
+
+  .form-actions
+    = f.button :submit

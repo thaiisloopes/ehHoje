@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Cnpj:
+  = @estabelecimento.cnpj
+%p
+  %b Empresa:
+  = @estabelecimento.empresa
+%p
+  %b Email:
+  = @estabelecimento.email
+%p
+  %b Senha:
+  = @estabelecimento.senha
+%p
+  %b Tipo:
+  = @estabelecimento.tipo
+
+= link_to 'Edit', edit_estabelecimento_path(@estabelecimento)
+\|
+= link_to 'Back', estabelecimentos_path

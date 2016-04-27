@@ -1,0 +1,29 @@
+%h1 Listing estabelecimentos
+
+%table
+  %thead
+    %tr
+      %th Cnpj
+      %th Empresa
+      %th Email
+      %th Senha
+      %th Tipo
+      %th
+      %th
+      %th
+
+  %tbody
+    - @estabelecimentos.each do |estabelecimento|
+      %tr
+        %td= estabelecimento.cnpj
+        %td= estabelecimento.empresa
+        %td= estabelecimento.email
+        %td= estabelecimento.senha
+        %td= estabelecimento.tipo
+        %td= link_to 'Show', estabelecimento
+        %td= link_to 'Edit', edit_estabelecimento_path(estabelecimento)
+        %td= link_to 'Destroy', estabelecimento, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Estabelecimento', new_estabelecimento_path
