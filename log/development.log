@@ -2275,3 +2275,355 @@ Migrating to CreateEstabelecimentos (20160427174336)
             FROM sqlite_temp_master
             WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
 [0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:51:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (3.5ms)
+Completed 200 OK in 53ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:51:13 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.5ms)[0m  SELECT "clientes".* FROM "clientes"
+  Rendered clientes/index.html.haml (22.0ms)
+Completed 200 OK in 56ms (Views: 42.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2016-04-27 14:51:15 -0300
+Processing by ClientesController#new as HTML
+  Rendered clientes/_form.html.haml (1310.7ms)
+  Rendered clientes/new.html.haml (1339.3ms)
+Completed 200 OK in 1433ms (Views: 1344.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/clientes" for 127.0.0.1 at 2016-04-27 14:51:19 -0300
+Processing by ClientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FKAqQ785F0/wFX5YZZlaTmQavShs/Nqu/goFDX8dzKa+DH2oKI4gHpFGEuG5Mmc+unA4Fp+bhFXzM1cVA/6bZg==", "cliente"=>{"nome"=>"", "cpf"=>"", "nacionalidade"=>"", "dtNasc"=>"", "cep"=>"", "endereco"=>"", "bairro"=>"", "cidade"=>"", "estado"=>"", "celular"=>"", "email"=>"", "senha"=>""}, "commit"=>"Create Cliente"}
+  [1m[36m (1.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clientes" ("nome", "cpf", "nacionalidade", "dtNasc", "cep", "endereco", "bairro", "cidade", "estado", "celular", "email", "senha", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["nome", ""], ["cpf", ""], ["nacionalidade", ""], ["dtNasc", ""], ["cep", ""], ["endereco", ""], ["bairro", ""], ["cidade", ""], ["estado", ""], ["celular", ""], ["email", ""], ["senha", ""], ["created_at", "2016-04-27 17:51:19.789732"], ["updated_at", "2016-04-27 17:51:19.789732"]]
+  [1m[36m (107.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clientes/1
+Completed 302 Found in 138ms (ActiveRecord: 110.6ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2016-04-27 14:51:20 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (0.6ms)[0m  SELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clientes/show.html.haml (12.6ms)
+Completed 200 OK in 73ms (Views: 18.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:51:22 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (1.4ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.haml (11.7ms)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2016-04-27 14:51:24 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (0.5ms)[0m  SELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clientes/show.html.haml (3.9ms)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:51:28 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (1.7ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.haml (15.8ms)
+Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2016-04-27 14:51:30 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clientes/show.html.haml (2.2ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes/1/edit" for 127.0.0.1 at 2016-04-27 14:51:35 -0300
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered clientes/_form.html.haml (60.8ms)
+  Rendered clientes/edit.html.haml (67.5ms)
+Completed 200 OK in 76ms (Views: 72.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:51:39 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (4.2ms)[0m  SELECT "clientes".* FROM "clientes"
+  Rendered clientes/index.html.haml (16.6ms)
+Completed 200 OK in 39ms (Views: 27.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2016-04-27 14:51:43 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.9ms)[0m  [1mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered clientes/show.html.haml (3.2ms)
+Completed 200 OK in 27ms (Views: 14.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:51:45 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (1.3ms)[0m  SELECT "clientes".* FROM "clientes"
+  Rendered clientes/index.html.haml (12.4ms)
+Completed 200 OK in 37ms (Views: 26.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/estabelecimento" for 127.0.0.1 at 2016-04-27 14:51:59 -0300
+
+ActionController::RoutingError (No route matches [GET] "/estabelecimento"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.6) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.6) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `load'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `load'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.7ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (148.1ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.5ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.0ms)
+
+
+Started GET "/estabelecimentos" for 127.0.0.1 at 2016-04-27 14:52:02 -0300
+Processing by EstabelecimentosController#index as HTML
+  [1m[36mEstabelecimento Load (1.0ms)[0m  [1mSELECT "estabelecimentos".* FROM "estabelecimentos"[0m
+  Rendered estabelecimentos/index.html.haml (15.2ms)
+Completed 200 OK in 38ms (Views: 28.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/eventos" for 127.0.0.1 at 2016-04-27 14:52:07 -0300
+Processing by EventosController#index as HTML
+  [1m[35mEvento Load (0.6ms)[0m  SELECT "eventos".* FROM "eventos"
+  Rendered eventos/index.html.haml (13.8ms)
+Completed 200 OK in 61ms (Views: 25.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2016-04-27 14:52:12 -0300
+
+ActionController::RoutingError (No route matches [GET] "/reservas"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.6) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.6) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `load'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `load'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.7ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/thais/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:52:21 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:53:23 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (2.2ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:53:41 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (1.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:54:00 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:54:20 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (1.9ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:54:32 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (0.9ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-27 14:54:41 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb (2.4ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:56:40 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.6ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.haml (7.5ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2016-04-27 14:56:43 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (1.8ms)[0m  SELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clientes/show.html.haml (7.5ms)
+Completed 200 OK in 41ms (Views: 29.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/clientes/1/edit" for 127.0.0.1 at 2016-04-27 14:56:45 -0300
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered clientes/_form.html.haml (75.7ms)
+  Rendered clientes/edit.html.haml (85.9ms)
+Completed 200 OK in 105ms (Views: 96.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/clientes/1" for 127.0.0.1 at 2016-04-27 14:57:42 -0300
+Processing by ClientesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9N0itS+kpFVCbKt8jFNfcjnNBaDKYTTdms0KAfptL4decXVeuBOTBCM/x8VQ+GIC56eAnjkGaiaX9FgZho54Rw==", "cliente"=>{"nome"=>"Thais", "cpf"=>"104.475.347-18", "nacionalidade"=>"Brasileira", "dtNasc"=>"27-07-94", "cep"=>"28.013-022", "endereco"=>"Rua Saldanha Marinho", "bairro"=>"Centro", "cidade"=>"Campos dos Goytacazes", "estado"=>"Rio de Janeiro", "celular"=>"(22) 9 9922-3905", "email"=>"tlnloopes@gmail.com", "senha"=>"123456"}, "commit"=>"Update Cliente", "id"=>"1"}
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "clientes" SET "nome" = ?, "cpf" = ?, "nacionalidade" = ?, "dtNasc" = ?, "cep" = ?, "endereco" = ?, "bairro" = ?, "cidade" = ?, "estado" = ?, "celular" = ?, "email" = ?, "senha" = ?, "updated_at" = ? WHERE "clientes"."id" = ?  [["nome", "Thais"], ["cpf", "104.475.347-18"], ["nacionalidade", "Brasileira"], ["dtNasc", "27-07-94"], ["cep", "28.013-022"], ["endereco", "Rua Saldanha Marinho"], ["bairro", "Centro"], ["cidade", "Campos dos Goytacazes"], ["estado", "Rio de Janeiro"], ["celular", "(22) 9 9922-3905"], ["email", "tlnloopes@gmail.com"], ["senha", "123456"], ["updated_at", "2016-04-27 17:57:42.575978"], ["id", 1]]
+  [1m[36m (202.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clientes/1
+Completed 302 Found in 229ms (ActiveRecord: 203.4ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2016-04-27 14:57:42 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clientes/show.html.haml (2.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-04-27 14:57:45 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (1.5ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.haml (11.8ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 1.5ms)
