@@ -1,0 +1,19 @@
+= simple_form_for(@cliente) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :cpf
+    = f.input :nacionalidade
+    = f.input :dtNasc
+    = f.input :cep
+    = f.input :endereco
+    = f.input :bairro
+    = f.input :cidade
+    = f.input :estado
+    = f.input :celular
+    = f.input :email
+    = f.input :senha
+
+  .form-actions
+    = f.button :submit

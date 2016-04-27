@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @cliente.nome
+%p
+  %b Cpf:
+  = @cliente.cpf
+%p
+  %b Nacionalidade:
+  = @cliente.nacionalidade
+%p
+  %b Dtnasc:
+  = @cliente.dtNasc
+%p
+  %b Cep:
+  = @cliente.cep
+%p
+  %b Endereco:
+  = @cliente.endereco
+%p
+  %b Bairro:
+  = @cliente.bairro
+%p
+  %b Cidade:
+  = @cliente.cidade
+%p
+  %b Estado:
+  = @cliente.estado
+%p
+  %b Celular:
+  = @cliente.celular
+%p
+  %b Email:
+  = @cliente.email
+%p
+  %b Senha:
+  = @cliente.senha
+
+= link_to 'Edit', edit_cliente_path(@cliente)
+\|
+= link_to 'Back', clientes_path
