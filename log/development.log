@@ -2877,3 +2877,665 @@ Processing by EstabelecimentosController#index as HTML
   [1m[36mEstabelecimento Load (0.5ms)[0m  [1mSELECT "estabelecimentos".* FROM "estabelecimentos"[0m
   Rendered estabelecimentos/index.html.haml within layouts/application (4.8ms)
 Completed 200 OK in 110ms (Views: 103.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-03 13:02:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.6) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.6) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `<main>'
+
+
+
+Started POST "/__better_errors/dc49d7abcccd3df6/variables" for 127.0.0.1 at 2016-05-03 13:02:08 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-03 13:03:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.6) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.6) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `<main>'
+
+
+
+Started POST "/__better_errors/d4c73b34745ae0f5/variables" for 127.0.0.1 at 2016-05-03 13:03:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateIngressos (20160503154440)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (14.9ms)[0m  [1mCREATE TABLE "ingressos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tipo" varchar, "valor" float, "evento" varchar, "cliente" varchar, "Evento_id" integer, "Cliente_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_ingressos_on_Evento_id" ON "ingressos" ("Evento_id")[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1mCREATE  INDEX "index_ingressos_on_Cliente_id" ON "ingressos" ("Cliente_id")[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503154440"]]
+  [1m[36m (175.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateReservas (20160503155218)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "reservas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" varchar, "hora" varchar, "cliente" varchar, "eventoCliente_id" integer, "Evento_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  CREATE  INDEX "index_reservas_on_eventoCliente_id" ON "reservas" ("eventoCliente_id")
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_eventoCliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_eventoCliente_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  CREATE  INDEX "index_reservas_on_Evento_id" ON "reservas" ("Evento_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160503155218"]]
+  [1m[35m (178.2ms)[0m  commit transaction
+Migrating to CreateAvaliacoes (20160503155737)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "avaliacoes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nota" varchar, "comentario" varchar, "cliente" varchar, "avaliado" varchar, "Cliente_id" integer, "Evento_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_avaliacoes_on_Cliente_id" ON "avaliacoes" ("Cliente_id")[0m
+  [1m[35m (0.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_avaliacoes_on_Evento_id" ON "avaliacoes" ("Evento_id")[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503155737"]]
+  [1m[36m (145.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Evento_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Cliente_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_Evento_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_eventoCliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_eventoCliente_id' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-03 13:05:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 1531ms (Views: 1491.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-03 13:05:18 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.5ms)[0m  SELECT "clientes".* FROM "clientes"
+  Rendered clientes/index.html.haml within layouts/application (47.2ms)
+Completed 200 OK in 180ms (Views: 161.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-03 13:05:21 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.5ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2016-05-03 13:05:24 -0300
+Processing by ReservasController#index as HTML
+  [1m[35mReserva Load (0.4ms)[0m  SELECT "reservas".* FROM "reservas"
+  Rendered reservas/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 277ms (Views: 125.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-03 13:06:29 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-03 13:06:30 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (1.6ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-03 13:06:35 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.5ms)[0m  SELECT "clientes".* FROM "clientes"
+  Rendered clientes/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/estabelecimentos" for 127.0.0.1 at 2016-05-03 13:06:38 -0300
+Processing by EstabelecimentosController#index as HTML
+  [1m[36mEstabelecimento Load (0.3ms)[0m  [1mSELECT "estabelecimentos".* FROM "estabelecimentos"[0m
+  Rendered estabelecimentos/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 99ms (Views: 83.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/estabelecimentos" for 127.0.0.1 at 2016-05-03 13:06:41 -0300
+Processing by EstabelecimentosController#index as HTML
+  [1m[35mEstabelecimento Load (0.7ms)[0m  SELECT "estabelecimentos".* FROM "estabelecimentos"
+  Rendered estabelecimentos/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/eventos" for 127.0.0.1 at 2016-05-03 13:06:45 -0300
+Processing by EventosController#index as HTML
+  [1m[36mEvento Load (0.3ms)[0m  [1mSELECT "eventos".* FROM "eventos"[0m
+  Rendered eventos/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 88ms (Views: 80.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventos" for 127.0.0.1 at 2016-05-03 13:06:47 -0300
+Processing by EventosController#index as HTML
+  [1m[35mEvento Load (1.6ms)[0m  SELECT "eventos".* FROM "eventos"
+  Rendered eventos/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2016-05-03 13:06:53 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mReserva Load (0.4ms)[0m  [1mSELECT "reservas".* FROM "reservas"[0m
+  Rendered reservas/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ingressos" for 127.0.0.1 at 2016-05-03 13:07:08 -0300
+Processing by IngressosController#index as HTML
+  [1m[35mIngresso Load (0.4ms)[0m  SELECT "ingressos".* FROM "ingressos"
+  Rendered ingressos/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 85ms (Views: 77.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/avaliacoes" for 127.0.0.1 at 2016-05-03 13:07:17 -0300
+Processing by AvaliacoesController#index as HTML
+  [1m[36mAvaliacao Load (0.4ms)[0m  [1mSELECT "avaliacoes".* FROM "avaliacoes"[0m
+  Rendered avaliacoes/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 82ms (Views: 72.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-03 13:07:29 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-03 13:07:30 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.6ms)[0m  SELECT "clientes".* FROM "clientes"
+  Rendered clientes/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Evento_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Cliente_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_Evento_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_eventoCliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_eventoCliente_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateIngressos (20160503160904)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "ingressos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Tipo" varchar, "Valor" float, "Evento_id" integer, "Cliente_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-03 13:10:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.6) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.6) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/thais/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `<main>'
+
+
+
+Started POST "/__better_errors/4c556435228243dc/variables" for 127.0.0.1 at 2016-05-03 13:10:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateIngressos (20160503160904)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "ingressos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Tipo" varchar, "Valor" float, "Evento_id" integer, "Cliente_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateIngressos (20160503161144)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "ingressos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Tipo" varchar, "Valor" float, "Evento_id" integer, "Cliente_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (158.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (139.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateClientes (20160427164419)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "clientes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "cpf" varchar, "nacionalidade" varchar, "dtNasc" varchar, "cep" varchar, "endereco" varchar, "bairro" varchar, "cidade" varchar, "estado" varchar, "celular" varchar, "email" varchar, "senha" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160427164419"]]
+  [1m[35m (150.3ms)[0m  commit transaction
+Migrating to CreateEventos (20160427173529)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "eventos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" varchar, "data" varchar, "horario" varchar, "local" varchar, "Estabelecimento_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_eventos_on_Estabelecimento_id" ON "eventos" ("Estabelecimento_id")[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160427173529"]]
+  [1m[36m (133.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEstabelecimentos (20160427174336)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "estabelecimentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cnpj" varchar, "empresa" varchar, "email" varchar, "senha" varchar, "tipo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160427174336"]]
+  [1m[36m (138.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateIngressos (20160503161144)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "ingressos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Tipo" varchar, "Valor" float, "Evento_id" integer, "Cliente_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_ingressos_on_Evento_id" ON "ingressos" ("Evento_id")
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+[0m
+  [1m[35m (5.2ms)[0m  CREATE  INDEX "index_ingressos_on_Cliente_id" ON "ingressos" ("Cliente_id")
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160503161144"]]
+  [1m[35m (162.6ms)[0m  commit transaction
+Migrating to CreateReservas (20160503161150)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "reservas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" varchar, "hora" varchar, "Cliente_id" integer, "Evento_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_reservas_on_Cliente_id" ON "reservas" ("Cliente_id")[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_Cliente_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_reservas_on_Evento_id" ON "reservas" ("Evento_id")[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503161150"]]
+  [1m[36m (142.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAvaliacoes (20160503161155)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "avaliacoes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nota" varchar, "comentario" varchar, "Cliente_id" integer, "Evento_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX "index_avaliacoes_on_Cliente_id" ON "avaliacoes" ("Cliente_id")
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+[0m
+  [1m[35m (4.7ms)[0m  CREATE  INDEX "index_avaliacoes_on_Evento_id" ON "avaliacoes" ("Evento_id")
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160503161155"]]
+  [1m[35m (165.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Evento_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_avaliacoes_on_Cliente_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_eventos_on_Estabelecimento_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Cliente_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingressos_on_Evento_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_Evento_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_Evento_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservas_on_Cliente_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservas_on_Cliente_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-03 13:14:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 609ms (Views: 588.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2016-05-03 13:14:56 -0300
+Processing by ReservasController#index as HTML
+  [1m[35mReserva Load (0.3ms)[0m  SELECT "reservas".* FROM "reservas"
+  Rendered reservas/index.html.haml within layouts/application (70.2ms)
+Completed 200 OK in 150ms (Views: 135.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingressos" for 127.0.0.1 at 2016-05-03 13:15:03 -0300
+Processing by IngressosController#index as HTML
+  [1m[36mIngresso Load (0.5ms)[0m  [1mSELECT "ingressos".* FROM "ingressos"[0m
+  Rendered ingressos/index.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 117ms (Views: 105.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/avaliacoes" for 127.0.0.1 at 2016-05-03 13:15:07 -0300
+Processing by AvaliacoesController#index as HTML
+  [1m[35mAvaliacao Load (0.4ms)[0m  SELECT "avaliacoes".* FROM "avaliacoes"
+  Rendered avaliacoes/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 95ms (Views: 84.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/avaliacoes/new" for 127.0.0.1 at 2016-05-03 13:15:11 -0300
+Processing by AvaliacoesController#new as HTML
+  [1m[36mCliente Load (0.8ms)[0m  [1mSELECT "clientes".* FROM "clientes"[0m
+  [1m[35mEvento Load (0.4ms)[0m  SELECT "eventos".* FROM "eventos"
+  Rendered avaliacoes/_form.html.haml (1775.0ms)
+  Rendered avaliacoes/new.html.haml within layouts/application (1829.1ms)
+Completed 200 OK in 1919ms (Views: 1882.7ms | ActiveRecord: 3.2ms)

@@ -1,9 +1,7 @@
 FactoryGirl.define do
   factory :ingresso do
-    tipo "MyString"
-    valor 1.5
-    evento "MyString"
-    cliente "MyString"
+    Tipo "MyString"
+    Valor 1.5
     Evento nil
     Cliente nil
   end

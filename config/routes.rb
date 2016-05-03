@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :avaliacoes
   resources :reservas
   resources :ingressos
+  resources :avaliacoes
+  resources :reservas
+  resources :ingressos
   resources :ingressos
   resources :estabelecimentos
   resources :eventos

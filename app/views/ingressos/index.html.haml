@@ -7,8 +7,6 @@
       %th Valor
       %th Evento
       %th Cliente
-      %th Evento
-      %th Cliente
       %th
       %th
       %th
@@ -16,10 +14,8 @@
   %tbody
     - @ingressos.each do |ingresso|
       %tr
-        %td= ingresso.tipo
-        %td= ingresso.valor
-        %td= ingresso.evento
-        %td= ingresso.cliente
+        %td= ingresso.Tipo
+        %td= ingresso.Valor
         %td= ingresso.Evento
         %td= ingresso.Cliente
         %td= link_to 'Show', ingresso

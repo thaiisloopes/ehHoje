@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427174336) do
+ActiveRecord::Schema.define(version: 20160503161155) do
+
+  create_table "avaliacoes", force: :cascade do |t|
+    t.string   "nota"
+    t.string   "comentario"
+    t.integer  "Cliente_id"
+    t.integer  "Evento_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "avaliacoes", ["Cliente_id"], name: "index_avaliacoes_on_Cliente_id"
+  add_index "avaliacoes", ["Evento_id"], name: "index_avaliacoes_on_Evento_id"
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome"
@@ -51,5 +63,29 @@ ActiveRecord::Schema.define(version: 20160427174336) do
   end
 
   add_index "eventos", ["Estabelecimento_id"], name: "index_eventos_on_Estabelecimento_id"
+
+  create_table "ingressos", force: :cascade do |t|
+    t.string   "Tipo"
+    t.float    "Valor"
+    t.integer  "Evento_id"
+    t.integer  "Cliente_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "ingressos", ["Cliente_id"], name: "index_ingressos_on_Cliente_id"
+  add_index "ingressos", ["Evento_id"], name: "index_ingressos_on_Evento_id"
+
+  create_table "reservas", force: :cascade do |t|
+    t.string   "data"
+    t.string   "hora"
+    t.integer  "Cliente_id"
+    t.integer  "Evento_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "reservas", ["Cliente_id"], name: "index_reservas_on_Cliente_id"
+  add_index "reservas", ["Evento_id"], name: "index_reservas_on_Evento_id"
 
 end

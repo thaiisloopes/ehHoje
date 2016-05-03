@@ -23,7 +23,7 @@ describe IngressosController do
   # This should return the minimal set of attributes required to create a valid
   # Ingresso. As you add validations to Ingresso, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "tipo" => "MyString" } }
+  let(:valid_attributes) { { "Tipo" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe IngressosController do
       it "assigns a newly created but unsaved ingresso as @ingresso" do
         # Trigger the behavior that occurs when invalid params are submitted
         Ingresso.any_instance.stub(:save).and_return(false)
-        post :create, {:ingresso => { "tipo" => "invalid value" }}, valid_session
+        post :create, {:ingresso => { "Tipo" => "invalid value" }}, valid_session
         assigns(:ingresso).should be_a_new(Ingresso)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Ingresso.any_instance.stub(:save).and_return(false)
-        post :create, {:ingresso => { "tipo" => "invalid value" }}, valid_session
+        post :create, {:ingresso => { "Tipo" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe IngressosController do
         # specifies that the Ingresso created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Ingresso.any_instance.should_receive(:update).with({ "tipo" => "MyString" })
-        put :update, {:id => ingresso.to_param, :ingresso => { "tipo" => "MyString" }}, valid_session
+        Ingresso.any_instance.should_receive(:update).with({ "Tipo" => "MyString" })
+        put :update, {:id => ingresso.to_param, :ingresso => { "Tipo" => "MyString" }}, valid_session
       end
 
       it "assigns the requested ingresso as @ingresso" do
@@ -128,7 +128,7 @@ describe IngressosController do
         ingresso = Ingresso.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Ingresso.any_instance.stub(:save).and_return(false)
-        put :update, {:id => ingresso.to_param, :ingresso => { "tipo" => "invalid value" }}, valid_session
+        put :update, {:id => ingresso.to_param, :ingresso => { "Tipo" => "invalid value" }}, valid_session
         assigns(:ingresso).should eq(ingresso)
       end
 
@@ -136,7 +136,7 @@ describe IngressosController do
         ingresso = Ingresso.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Ingresso.any_instance.stub(:save).and_return(false)
-        put :update, {:id => ingresso.to_param, :ingresso => { "tipo" => "invalid value" }}, valid_session
+        put :update, {:id => ingresso.to_param, :ingresso => { "Tipo" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end

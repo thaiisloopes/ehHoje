@@ -69,6 +69,6 @@ class IngressosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ingresso_params
-      params.require(:ingresso).permit(:tipo, :valor, :evento, :cliente, :Evento_id, :Cliente_id)
+      params.require(:ingresso).permit(:Tipo, :Valor, :Evento_id, :Cliente_id)
     end
 end

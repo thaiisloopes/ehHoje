@@ -6,7 +6,6 @@
       %th Data
       %th Hora
       %th Cliente
-      %th Eventocliente
       %th Evento
       %th
       %th
@@ -17,8 +16,7 @@
       %tr
         %td= reserva.data
         %td= reserva.hora
-        %td= reserva.cliente
-        %td= reserva.eventoCliente
+        %td= reserva.Cliente
         %td= reserva.Evento
         %td= link_to 'Show', reserva
         %td= link_to 'Edit', edit_reserva_path(reserva)
