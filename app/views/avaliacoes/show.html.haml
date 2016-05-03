@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Nota:
+  = @avaliacao.nota
+%p
+  %b Comentario:
+  = @avaliacao.comentario
+%p
+  %b Cliente:
+  = @avaliacao.cliente
+%p
+  %b Avaliado:
+  = @avaliacao.avaliado
+%p
+  %b Cliente:
+  = @avaliacao.Cliente
+%p
+  %b Evento:
+  = @avaliacao.Evento
+
+= link_to 'Edit', edit_avaliacao_path(@avaliacao)
+\|
+= link_to 'Back', avaliacoes_path

@@ -1,0 +1,13 @@
+= simple_form_for(@avaliacao) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nota
+    = f.input :comentario
+    = f.input :cliente
+    = f.input :avaliado
+    = f.association :Cliente
+    = f.association :Evento
+
+  .form-actions
+    = f.button :submit
