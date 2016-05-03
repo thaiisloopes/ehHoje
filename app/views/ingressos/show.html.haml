@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Tipo:
+  = @ingresso.tipo
+%p
+  %b Valor:
+  = @ingresso.valor
+%p
+  %b Evento:
+  = @ingresso.evento
+%p
+  %b Cliente:
+  = @ingresso.cliente
+%p
+  %b Evento:
+  = @ingresso.Evento
+%p
+  %b Cliente:
+  = @ingresso.Cliente
+
+= link_to 'Edit', edit_ingresso_path(@ingresso)
+\|
+= link_to 'Back', ingressos_path

@@ -1,0 +1,31 @@
+%h1 Listing ingressos
+
+%table
+  %thead
+    %tr
+      %th Tipo
+      %th Valor
+      %th Evento
+      %th Cliente
+      %th Evento
+      %th Cliente
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ingressos.each do |ingresso|
+      %tr
+        %td= ingresso.tipo
+        %td= ingresso.valor
+        %td= ingresso.evento
+        %td= ingresso.cliente
+        %td= ingresso.Evento
+        %td= ingresso.Cliente
+        %td= link_to 'Show', ingresso
+        %td= link_to 'Edit', edit_ingresso_path(ingresso)
+        %td= link_to 'Destroy', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ingresso', new_ingresso_path
