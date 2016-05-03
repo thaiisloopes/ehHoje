@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Data:
+  = @reserva.data
+%p
+  %b Hora:
+  = @reserva.hora
+%p
+  %b Cliente:
+  = @reserva.cliente
+%p
+  %b Eventocliente:
+  = @reserva.eventoCliente
+%p
+  %b Evento:
+  = @reserva.Evento
+
+= link_to 'Edit', edit_reserva_path(@reserva)
+\|
+= link_to 'Back', reservas_path
