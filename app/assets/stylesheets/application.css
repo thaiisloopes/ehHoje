@@ -1,0 +1,11 @@
+#menu{
+	/*background: #9C5080;*/
+	text-align: center;
+}
+#menu li{
+	display: inline-block;
+}
+#menu li a{
+	text-decoration: none;
+	padding: 10px 20px;
+}

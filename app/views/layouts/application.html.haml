@@ -1,6 +1,8 @@
 %html
 	%head
 		= javascript_include_tag "application"
+		= stylesheet_link_tag "application"
+		%title= yield(:title)
 	%body
-		%h2 teste
+		= render "layouts/header"
 		= yield
