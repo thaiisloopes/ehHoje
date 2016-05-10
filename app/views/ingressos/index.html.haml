@@ -1,4 +1,4 @@
-%h1 Listing ingressos
+%h1 Ingressos
 
 %table
   %thead
@@ -20,10 +20,8 @@
         %td= ingresso.Cliente
         %td= link_to 'Show', ingresso
         %td= link_to 'Edit', edit_ingresso_path(ingresso)
-        %td= link_to 'Destroy', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
 = link_to 'New Ingresso', new_ingresso_path
-<br><hr>
-<a href="../#index">Home</a><br><hr>

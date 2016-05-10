@@ -1,4 +1,4 @@
-%h1 Listing clientes
+%h1 Clientes
 
 %table
   %thead
@@ -6,9 +6,9 @@
       %th Nome
       %th Cpf
       %th Nacionalidade
-      %th Dtnasc
+      %th Data Nascimento
       %th Cep
-      %th Endereco
+      %th Endereço
       %th Bairro
       %th Cidade
       %th Estado
@@ -36,10 +36,8 @@
         %td= cliente.senha
         %td= link_to 'Show', cliente
         %td= link_to 'Edit', edit_cliente_path(cliente)
-        %td= link_to 'Destroy', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
 = link_to 'New Cliente', new_cliente_path
-<br><hr>
-<a href="../#index">Home</a><br><hr>

@@ -1,10 +1,10 @@
-%h1 Listing avaliacoes
+%h1 Avaliações
 
 %table
   %thead
     %tr
       %th Nota
-      %th Comentario
+      %th Comentário
       %th Cliente
       %th Evento
       %th
@@ -20,10 +20,8 @@
         %td= avaliacao.Evento
         %td= link_to 'Show', avaliacao
         %td= link_to 'Edit', edit_avaliacao_path(avaliacao)
-        %td= link_to 'Destroy', avaliacao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', avaliacao, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
 = link_to 'New Avaliacao', new_avaliacao_path
-<br><hr>
-<a href="../#index">Home</a><br><hr>
