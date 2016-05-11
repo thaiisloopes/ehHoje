@@ -57,12 +57,12 @@ ActiveRecord::Schema.define(version: 20160503161155) do
     t.string   "data"
     t.string   "horario"
     t.string   "local"
-    t.integer  "Estabelecimento_id"
+    t.integer  "estabelecimento_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
 
-  add_index "eventos", ["Estabelecimento_id"], name: "index_eventos_on_Estabelecimento_id"
+  add_index "eventos", ["estabelecimento_id"], name: "index_eventos_on_estabelecimento_id"
 
   create_table "ingressos", force: :cascade do |t|
     t.string   "Tipo"
