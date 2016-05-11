@@ -1,4 +1,4 @@
-%h1 Listing reservas
+%h1 Reservas
 
 %table
   %thead
@@ -20,7 +20,7 @@
         %td= reserva.Evento
         %td= link_to 'Show', reserva
         %td= link_to 'Edit', edit_reserva_path(reserva)
-        %td= link_to 'Destroy', reserva, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', reserva, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

@@ -1,4 +1,4 @@
-%h1 Listing eventos
+%h1 Eventos
 
 %table
   %thead
@@ -20,7 +20,7 @@
         %td= evento.Estabelecimento
         %td= link_to 'Show', evento
         %td= link_to 'Edit', edit_evento_path(evento)
-        %td= link_to 'Destroy', evento, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', evento, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

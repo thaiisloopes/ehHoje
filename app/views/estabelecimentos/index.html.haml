@@ -1,4 +1,4 @@
-%h1 Listing estabelecimentos
+%h1 Estabelecimentos
 
 %table
   %thead
@@ -22,7 +22,7 @@
         %td= estabelecimento.Tipo
         %td= link_to 'Show', estabelecimento
         %td= link_to 'Edit', edit_estabelecimento_path(estabelecimento)
-        %td= link_to 'Destroy', estabelecimento, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', estabelecimento, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
