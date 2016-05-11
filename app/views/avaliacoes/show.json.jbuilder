@@ -1,1 +1,1 @@
-json.extract! @avaliacao, :id, :Nota, :Comentário, :Cliente_id, :Evento_id, :created_at, :updated_at
+json.extract! @avaliacao, :id, :Nota, :Comentário, :cliente_id, :evento_id, :created_at, :updated_at

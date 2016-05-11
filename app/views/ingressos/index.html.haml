@@ -16,8 +16,8 @@
       %tr
         %td= ingresso.Tipo
         %td= ingresso.Valor
-        %td= ingresso.Evento
-        %td= ingresso.Cliente
+        %td= ingresso.evento
+        %td= ingresso.cliente
         %td= link_to 'Show', ingresso
         %td= link_to 'Edit', edit_ingresso_path(ingresso)
         %td= link_to 'Excluir', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }

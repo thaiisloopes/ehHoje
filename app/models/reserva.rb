@@ -1,4 +1,4 @@
 class Reserva < ActiveRecord::Base
-  belongs_to :Cliente
-  belongs_to :Evento
+  belongs_to :cliente
+  belongs_to :evento
 end

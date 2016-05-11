@@ -1,4 +1,4 @@
 class Ingresso < ActiveRecord::Base
-  belongs_to :Evento
-  belongs_to :Cliente
+  belongs_to :evento
+  belongs_to :cliente
 end

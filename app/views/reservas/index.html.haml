@@ -16,8 +16,8 @@
       %tr
         %td= reserva.Data
         %td= reserva.Hora
-        %td= reserva.Cliente
-        %td= reserva.Evento
+        %td= reserva.cliente
+        %td= reserva.evento
         %td= link_to 'Show', reserva
         %td= link_to 'Edit', edit_reserva_path(reserva)
         %td= link_to 'Excluir', reserva, :method => :delete, :data => { :confirm => 'Are you sure?' }
