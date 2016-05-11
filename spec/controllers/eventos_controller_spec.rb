@@ -23,7 +23,7 @@ describe EventosController do
   # This should return the minimal set of attributes required to create a valid
   # Evento. As you add validations to Evento, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "descricao" => "MyString" } }
+  let(:valid_attributes) { { "Descrição" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe EventosController do
       it "assigns a newly created but unsaved evento as @evento" do
         # Trigger the behavior that occurs when invalid params are submitted
         Evento.any_instance.stub(:save).and_return(false)
-        post :create, {:evento => { "descricao" => "invalid value" }}, valid_session
+        post :create, {:evento => { "Descrição" => "invalid value" }}, valid_session
         assigns(:evento).should be_a_new(Evento)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Evento.any_instance.stub(:save).and_return(false)
-        post :create, {:evento => { "descricao" => "invalid value" }}, valid_session
+        post :create, {:evento => { "Descrição" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe EventosController do
         # specifies that the Evento created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Evento.any_instance.should_receive(:update).with({ "descricao" => "MyString" })
-        put :update, {:id => evento.to_param, :evento => { "descricao" => "MyString" }}, valid_session
+        Evento.any_instance.should_receive(:update).with({ "Descrição" => "MyString" })
+        put :update, {:id => evento.to_param, :evento => { "Descrição" => "MyString" }}, valid_session
       end
 
       it "assigns the requested evento as @evento" do
@@ -128,7 +128,7 @@ describe EventosController do
         evento = Evento.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Evento.any_instance.stub(:save).and_return(false)
-        put :update, {:id => evento.to_param, :evento => { "descricao" => "invalid value" }}, valid_session
+        put :update, {:id => evento.to_param, :evento => { "Descrição" => "invalid value" }}, valid_session
         assigns(:evento).should eq(evento)
       end
 
@@ -136,7 +136,7 @@ describe EventosController do
         evento = Evento.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Evento.any_instance.stub(:save).and_return(false)
-        put :update, {:id => evento.to_param, :evento => { "descricao" => "invalid value" }}, valid_session
+        put :update, {:id => evento.to_param, :evento => { "Descrição" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end

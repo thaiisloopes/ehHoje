@@ -1,9 +1,8 @@
 FactoryGirl.define do
   factory :evento do
-    descricao "MyString"
-    data "MyString"
-    horario "MyString"
-    local "MyString"
+    Descrição "MyString"
+    Data "MyString"
+    Horário "MyString"
     Estabelecimento nil
   end
 end

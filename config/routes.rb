@@ -2,13 +2,13 @@ Rails.application.routes.draw do
   resources :avaliacoes
   resources :reservas
   resources :ingressos
+  resources :eventos
+  resources :estabelecimentos
+  resources :clientes
   resources :avaliacoes
   resources :reservas
   resources :ingressos
   resources :ingressos
-  resources :estabelecimentos
-  resources :eventos
-  resources :clientes
   root to: 'visitors#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

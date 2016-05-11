@@ -1,1 +1,1 @@
-json.extract! @estabelecimento, :id, :cnpj, :empresa, :email, :senha, :tipo, :created_at, :updated_at
+json.extract! @estabelecimento, :id, :CNPJ, :Empresa, :Email, :Senha, :Tipo, :created_at, :updated_at

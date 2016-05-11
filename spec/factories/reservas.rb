@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :reserva do
-    data "MyString"
-    hora "MyString"
+    Data "MyString"
+    Hora "MyString"
     Cliente nil
     Evento nil
   end

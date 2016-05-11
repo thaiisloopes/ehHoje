@@ -23,7 +23,7 @@ describe AvaliacoesController do
   # This should return the minimal set of attributes required to create a valid
   # Avaliacao. As you add validations to Avaliacao, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "nota" => "MyString" } }
+  let(:valid_attributes) { { "Nota" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe AvaliacoesController do
       it "assigns a newly created but unsaved avaliacao as @avaliacao" do
         # Trigger the behavior that occurs when invalid params are submitted
         Avaliacao.any_instance.stub(:save).and_return(false)
-        post :create, {:avaliacao => { "nota" => "invalid value" }}, valid_session
+        post :create, {:avaliacao => { "Nota" => "invalid value" }}, valid_session
         assigns(:avaliacao).should be_a_new(Avaliacao)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Avaliacao.any_instance.stub(:save).and_return(false)
-        post :create, {:avaliacao => { "nota" => "invalid value" }}, valid_session
+        post :create, {:avaliacao => { "Nota" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe AvaliacoesController do
         # specifies that the Avaliacao created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Avaliacao.any_instance.should_receive(:update).with({ "nota" => "MyString" })
-        put :update, {:id => avaliacao.to_param, :avaliacao => { "nota" => "MyString" }}, valid_session
+        Avaliacao.any_instance.should_receive(:update).with({ "Nota" => "MyString" })
+        put :update, {:id => avaliacao.to_param, :avaliacao => { "Nota" => "MyString" }}, valid_session
       end
 
       it "assigns the requested avaliacao as @avaliacao" do
@@ -128,7 +128,7 @@ describe AvaliacoesController do
         avaliacao = Avaliacao.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Avaliacao.any_instance.stub(:save).and_return(false)
-        put :update, {:id => avaliacao.to_param, :avaliacao => { "nota" => "invalid value" }}, valid_session
+        put :update, {:id => avaliacao.to_param, :avaliacao => { "Nota" => "invalid value" }}, valid_session
         assigns(:avaliacao).should eq(avaliacao)
       end
 
@@ -136,7 +136,7 @@ describe AvaliacoesController do
         avaliacao = Avaliacao.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Avaliacao.any_instance.stub(:save).and_return(false)
-        put :update, {:id => avaliacao.to_param, :avaliacao => { "nota" => "invalid value" }}, valid_session
+        put :update, {:id => avaliacao.to_param, :avaliacao => { "Nota" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end

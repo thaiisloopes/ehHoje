@@ -23,7 +23,7 @@ describe ReservasController do
   # This should return the minimal set of attributes required to create a valid
   # Reserva. As you add validations to Reserva, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "data" => "MyString" } }
+  let(:valid_attributes) { { "Data" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe ReservasController do
       it "assigns a newly created but unsaved reserva as @reserva" do
         # Trigger the behavior that occurs when invalid params are submitted
         Reserva.any_instance.stub(:save).and_return(false)
-        post :create, {:reserva => { "data" => "invalid value" }}, valid_session
+        post :create, {:reserva => { "Data" => "invalid value" }}, valid_session
         assigns(:reserva).should be_a_new(Reserva)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Reserva.any_instance.stub(:save).and_return(false)
-        post :create, {:reserva => { "data" => "invalid value" }}, valid_session
+        post :create, {:reserva => { "Data" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe ReservasController do
         # specifies that the Reserva created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Reserva.any_instance.should_receive(:update).with({ "data" => "MyString" })
-        put :update, {:id => reserva.to_param, :reserva => { "data" => "MyString" }}, valid_session
+        Reserva.any_instance.should_receive(:update).with({ "Data" => "MyString" })
+        put :update, {:id => reserva.to_param, :reserva => { "Data" => "MyString" }}, valid_session
       end
 
       it "assigns the requested reserva as @reserva" do
@@ -128,7 +128,7 @@ describe ReservasController do
         reserva = Reserva.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Reserva.any_instance.stub(:save).and_return(false)
-        put :update, {:id => reserva.to_param, :reserva => { "data" => "invalid value" }}, valid_session
+        put :update, {:id => reserva.to_param, :reserva => { "Data" => "invalid value" }}, valid_session
         assigns(:reserva).should eq(reserva)
       end
 
@@ -136,7 +136,7 @@ describe ReservasController do
         reserva = Reserva.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Reserva.any_instance.stub(:save).and_return(false)
-        put :update, {:id => reserva.to_param, :reserva => { "data" => "invalid value" }}, valid_session
+        put :update, {:id => reserva.to_param, :reserva => { "Data" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end

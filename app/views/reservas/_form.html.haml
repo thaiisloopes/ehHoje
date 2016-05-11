@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :data
-    = f.input :hora
+    = f.input :Data
+    = f.input :Hora
     = f.association :Cliente
     = f.association :Evento
 
   .form-actions
-    = f.submit "Salvar"
+    = f.button :submit

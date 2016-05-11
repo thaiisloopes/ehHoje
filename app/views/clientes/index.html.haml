@@ -1,4 +1,4 @@
-%h1 Clientes
+%h1 Listing clientes
 
 %table
   %thead
@@ -6,7 +6,7 @@
       %th Nome
       %th Cpf
       %th Nacionalidade
-      %th Data Nascimento
+      %th Datanascimento
       %th Cep
       %th Endereço
       %th Bairro
@@ -22,21 +22,21 @@
   %tbody
     - @clientes.each do |cliente|
       %tr
-        %td= cliente.nome
-        %td= cliente.cpf
-        %td= cliente.nacionalidade
-        %td= cliente.dtNasc
-        %td= cliente.cep
-        %td= cliente.endereco
-        %td= cliente.bairro
-        %td= cliente.cidade
-        %td= cliente.estado
-        %td= cliente.celular
-        %td= cliente.email
-        %td= cliente.senha
+        %td= cliente.Nome
+        %td= cliente.CPF
+        %td= cliente.Nacionalidade
+        %td= cliente.DataNascimento
+        %td= cliente.CEP
+        %td= cliente.Endereço
+        %td= cliente.Bairro
+        %td= cliente.Cidade
+        %td= cliente.Estado
+        %td= cliente.Celular
+        %td= cliente.Email
+        %td= cliente.Senha
         %td= link_to 'Show', cliente
         %td= link_to 'Edit', edit_cliente_path(cliente)
-        %td= link_to 'Excluir', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

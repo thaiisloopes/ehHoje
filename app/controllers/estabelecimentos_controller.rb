@@ -69,6 +69,6 @@ class EstabelecimentosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def estabelecimento_params
-      params.require(:estabelecimento).permit(:cnpj, :empresa, :email, :senha, :tipo)
+      params.require(:estabelecimento).permit(:CNPJ, :Empresa, :Email, :Senha, :Tipo)
     end
 end

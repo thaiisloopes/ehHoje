@@ -23,7 +23,7 @@ describe EstabelecimentosController do
   # This should return the minimal set of attributes required to create a valid
   # Estabelecimento. As you add validations to Estabelecimento, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "cnpj" => "MyString" } }
+  let(:valid_attributes) { { "CNPJ" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe EstabelecimentosController do
       it "assigns a newly created but unsaved estabelecimento as @estabelecimento" do
         # Trigger the behavior that occurs when invalid params are submitted
         Estabelecimento.any_instance.stub(:save).and_return(false)
-        post :create, {:estabelecimento => { "cnpj" => "invalid value" }}, valid_session
+        post :create, {:estabelecimento => { "CNPJ" => "invalid value" }}, valid_session
         assigns(:estabelecimento).should be_a_new(Estabelecimento)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Estabelecimento.any_instance.stub(:save).and_return(false)
-        post :create, {:estabelecimento => { "cnpj" => "invalid value" }}, valid_session
+        post :create, {:estabelecimento => { "CNPJ" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe EstabelecimentosController do
         # specifies that the Estabelecimento created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Estabelecimento.any_instance.should_receive(:update).with({ "cnpj" => "MyString" })
-        put :update, {:id => estabelecimento.to_param, :estabelecimento => { "cnpj" => "MyString" }}, valid_session
+        Estabelecimento.any_instance.should_receive(:update).with({ "CNPJ" => "MyString" })
+        put :update, {:id => estabelecimento.to_param, :estabelecimento => { "CNPJ" => "MyString" }}, valid_session
       end
 
       it "assigns the requested estabelecimento as @estabelecimento" do
@@ -128,7 +128,7 @@ describe EstabelecimentosController do
         estabelecimento = Estabelecimento.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Estabelecimento.any_instance.stub(:save).and_return(false)
-        put :update, {:id => estabelecimento.to_param, :estabelecimento => { "cnpj" => "invalid value" }}, valid_session
+        put :update, {:id => estabelecimento.to_param, :estabelecimento => { "CNPJ" => "invalid value" }}, valid_session
         assigns(:estabelecimento).should eq(estabelecimento)
       end
 
@@ -136,7 +136,7 @@ describe EstabelecimentosController do
         estabelecimento = Estabelecimento.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Estabelecimento.any_instance.stub(:save).and_return(false)
-        put :update, {:id => estabelecimento.to_param, :estabelecimento => { "cnpj" => "invalid value" }}, valid_session
+        put :update, {:id => estabelecimento.to_param, :estabelecimento => { "CNPJ" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end

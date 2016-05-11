@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :estabelecimento do
-    cnpj "MyString"
-    empresa "MyString"
-    email "MyString"
-    senha "MyString"
-    tipo "MyString"
+    CNPJ "MyString"
+    Empresa "MyString"
+    Email "MyString"
+    Senha "MyString"
+    Tipo "MyString"
   end
 end

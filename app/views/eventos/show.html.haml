@@ -1,20 +1,17 @@
 %p#notice= notice
 
 %p
-  %b Descricao:
-  = @evento.descricao
+  %b Descrição:
+  = @evento.Descrição
 %p
   %b Data:
-  = @evento.data
+  = @evento.Data
 %p
-  %b Horario:
-  = @evento.horario
-%p
-  %b Local:
-  = @evento.local
+  %b Horário:
+  = @evento.Horário
 %p
   %b Estabelecimento:
-  = @evento.estabelecimento.empresa
+  = @evento.Estabelecimento
 
 = link_to 'Edit', edit_evento_path(@evento)
 \|
