@@ -4,7 +4,7 @@ class CreateEventos < ActiveRecord::Migration
       t.string :Descrição
       t.string :Data
       t.string :Horário
-      t.references :Estabelecimento, index: true, foreign_key: true
+      t.references :estabelecimento, index: true, foreign_key: true
 
       t.timestamps null: false
     end

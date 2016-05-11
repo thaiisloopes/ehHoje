@@ -1,3 +1,3 @@
 class Evento < ActiveRecord::Base
-  belongs_to :Estabelecimento
+  belongs_to :estabelecimento
 end

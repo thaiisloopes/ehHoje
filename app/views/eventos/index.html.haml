@@ -17,7 +17,7 @@
         %td= evento.Descrição
         %td= evento.Data
         %td= evento.Horário
-        %td= evento.Estabelecimento
+        %td= evento.estabelecimento
         %td= link_to 'Show', evento
         %td= link_to 'Edit', edit_evento_path(evento)
         %td= link_to 'Excluir', evento, :method => :delete, :data => { :confirm => 'Are you sure?' }
