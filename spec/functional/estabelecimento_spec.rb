@@ -4,19 +4,19 @@ require 'spec_helper'
 
 feature 'gerenciar Estabelecimento' do
 
-  scenario 'incluir Estabelecimento' do 
+  scenario 'incluir Estabelecimento' do
     visit new_estabelecimento_path
     preencher_e_verificar_estabelecimento
   end
 
-  scenario 'alterar Estabelecimento' do 
+  scenario 'alterar Estabelecimento' do
     estabelecimento = FactoryGirl.create(:estabelecimento)
     visit edit_estabelecimento_path(estabelecimento)
     preencher_e_verificar_estabelecimento
 
   end
 
-  scenario 'excluir Estabelecimento' do 
+  scenario 'excluir Estabelecimento' do
     estabelecimento = FactoryGirl.create(:estabelecimento)
     visit estabelecimentos_path
     click_link 'Excluir'

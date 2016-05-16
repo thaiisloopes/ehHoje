@@ -2,62 +2,68 @@
 
 require 'spec_helper'
 
-feature 'gerenciar evento' do 
+feature 'gerenciar Evento' do
 
-  scenario 'incluir evento' do
-    criar_estabelecimento
-    visit new_evento_path
-    preencher_e_verificar_evento
+  before(:each) do
+    @estabelecimento = create(:Estabelecimento, nome: "Barra Music")
   end
 
-  scenario 'alterar evento' do
-    criar_estabelecimento
-    evento = FactoryGirl.create(:evento)
+
+  let(:dados) do {
+
+    Descrição: "Saturday Night",
+    Data: "30-04-2016",
+    Horário: "23:00",
+    Local: "Barra Music"
+   }
+  end
+
+  scenario 'incluir evento' do #, :js => true  do
+    visit new_evento_path
+    preencher(dados)
+    click_button 'Salvar'
+    verificar(dados)
+
+  end
+
+  scenario 'alterar evento' do #, :js => true  do
+
+    evento = FactoryGirl.create(:evento, Estabelecimento: @estabelecimento )
+
     visit edit_evento_path(evento)
-    preencher_e_verificar_evento
+    preencher(dados)
+    click_button 'Salvar'
+    verificar(dados)
+
+
   end
 
-  scenario 'excluir evento' do
-    criar_estabelecimento
-    visit new_evento_path
-    preencher_e_verificar_evento
-    visit estabelecimento_path
+  scenario 'excluir evento' do #, :js => true  do
+
+    evento = FactoryGirl.create(:evento, estabelecimento: @estabelecimento)
+    visit eventos_path
+
     click_link 'Excluir'
+
   end
 
-  def preencher_e_verificar_evento
-    fill_in 'Descricao', :with => "Saturday Night"
-    fill_in 'Data', :with => "30-04-2016"
-    fill_in 'Horario', :with => "23:00"
-    select "Barra Music", from: 'Estabelecimento'
+  def preencher(dados)
 
-    click_button 'Salvar'
+    fill_in 'Descrição',  with: dados[:Descrição]
+    fill_in 'Data',  with: dados[:Data]
+    fill_in 'Horário', with: dados[:Horário]
+    select dados[:estabelecimento], from: "Estabelecimento"
 
-    expect(page).to have_content 'Descricao: Saturday Night'
-    expect(page).to have_content 'Data: 30-04-2016'
-    expect(page).to have_content 'Horario: 23:00'
-    expect(page).to have_content 'Local: Barra Music'
+
   end
 
-  def preencher_e_verificar_estabelecimento 
-    fill_in 'Cnpj', :with => "123456789987456"
-    fill_in 'Empresa', :with => "Barra Music"
-    fill_in 'Email', :with => "barramusic@rio.rj.gov.br"
-    fill_in 'Senha', :with => "12345678"
-    fill_in 'Tipo', :with => "Boate"
+  def verificar(dados)
 
-    click_button 'Salvar'
+    page.should have_content "Descrição: #{dados[:Descrição]}"
+    page.should have_content "Data: #{dados[:Data]}"
+    page.should have_content "Horário: #{dados[:Horário]}"
+    page.should have_content "Local: #{dados[:estabelecimento]}"
 
-    expect(page).to have_content 'Cnpj: 123456789987456'
-    expect(page).to have_content 'Empresa: Barra Music'
-    expect(page).to have_content 'Email: barramusic@rio.rj.gov.br'
-    expect(page).to have_content 'Senha: 12345678'
-    expect(page).to have_content 'Tipo: Boate'
   end
 
-  def criar_estabelecimento
-    visit new_estabelecimento_path
-    preencher_e_verificar_estabelecimento
-  end
-  
 end

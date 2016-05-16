@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20160511164736) do
   create_table "avaliacoes", force: :cascade do |t|
     t.string   "Nota"
     t.string   "Comentário"
-    t.integer  "Cliente_id"
-    t.integer  "Evento_id"
+    t.integer  "cliente_id"
+    t.integer  "evento_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "avaliacoes", ["Cliente_id"], name: "index_avaliacoes_on_Cliente_id"
-  add_index "avaliacoes", ["Evento_id"], name: "index_avaliacoes_on_Evento_id"
+  add_index "avaliacoes", ["cliente_id"], name: "index_avaliacoes_on_cliente_id"
+  add_index "avaliacoes", ["evento_id"], name: "index_avaliacoes_on_evento_id"
 
   create_table "clientes", force: :cascade do |t|
     t.string   "Nome"
@@ -56,35 +56,35 @@ ActiveRecord::Schema.define(version: 20160511164736) do
     t.string   "Descrição"
     t.string   "Data"
     t.string   "Horário"
-    t.integer  "Estabelecimento_id"
+    t.integer  "estabelecimento_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
 
-  add_index "eventos", ["Estabelecimento_id"], name: "index_eventos_on_Estabelecimento_id"
+  add_index "eventos", ["estabelecimento_id"], name: "index_eventos_on_estabelecimento_id"
 
   create_table "ingressos", force: :cascade do |t|
     t.string   "Tipo"
     t.string   "Valor"
-    t.integer  "Evento_id"
-    t.integer  "Cliente_id"
+    t.integer  "evento_id"
+    t.integer  "cliente_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "ingressos", ["Cliente_id"], name: "index_ingressos_on_Cliente_id"
-  add_index "ingressos", ["Evento_id"], name: "index_ingressos_on_Evento_id"
+  add_index "ingressos", ["cliente_id"], name: "index_ingressos_on_cliente_id"
+  add_index "ingressos", ["evento_id"], name: "index_ingressos_on_evento_id"
 
   create_table "reservas", force: :cascade do |t|
     t.string   "Data"
     t.string   "Hora"
-    t.integer  "Cliente_id"
-    t.integer  "Evento_id"
+    t.integer  "cliente_id"
+    t.integer  "evento_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "reservas", ["Cliente_id"], name: "index_reservas_on_Cliente_id"
-  add_index "reservas", ["Evento_id"], name: "index_reservas_on_Evento_id"
+  add_index "reservas", ["cliente_id"], name: "index_reservas_on_cliente_id"
+  add_index "reservas", ["evento_id"], name: "index_reservas_on_evento_id"
 
 end

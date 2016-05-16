@@ -1,94 +1,67 @@
-# coding: utf-8
+#coding: utf-8
 
 require 'spec_helper'
 
-feature 'gerenciar ingresso' do 
+feature 'gerenciar Ingresso' do
 
-  scenario 'incluir ingresso' do
-    criar_evento
-    visit new_ingresso_path
-    preencher_e_verificar_ingresso
+  before(:each) do
+    @cliente = create(:Cliente, nome: "Thais")
+    @evento = create(:Evento, nome: "Saturday Night")
   end
 
-  scenario 'alterar ingresso' do
-    criar_evento
-    ingresso = FactoryGirl.create(:ingresso)
+
+  let(:dados) do {
+    Tipo: "VIP",
+    Valor: "R$ 60",
+    Cliente: "Thais",
+    Evento: "Saturday Night"
+   }
+  end
+
+  scenario 'incluir Ingresso' do #, :js => true  do
+    visit new_ingresso_path
+    preencher(dados)
+    click_button 'Salvar'
+    verificar(dados)
+
+  end
+
+  scenario 'alterar Ingresso' do #, :js => true  do
+
+    ingresso = FactoryGirl.create(:ingresso, Tipo: tipo, Valor: valor, Cliente: @cliente, Evento: @evento)
+
     visit edit_ingresso_path(ingresso)
-    preencher_e_verificar_ingresso
+    preencher(dados)
+    click_button 'Salvar'
+    verificar(dados)
+
+
   end
 
-  scenario 'excluir ingresso' do
-    criar_evento
-    visit new_ingresso_path
-    preencher_e_verificar_ingresso
-    visit eventos_path
+  scenario 'excluir Ingresso' do #, :js => true  do
+
+    ingresso = FactoryGirl.create(:ingresso, Tipo: tipo, Valor: valor, Cliente: @cliente, Evento: @evento)
+    visit ingressos_path
+
     click_link 'Excluir'
+
   end
 
-  def criar_cliente
-    cliente = FactoryGirl.create(:cliente)
-    visit new_cliente_path
-    preencher_e_verificar_cliente
-  end
+  def preencher(dados)
 
-  def criar_evento
-    criar_cliente
-    visit new_evento_path
-    preencher_e_verificar_evento
-  end
-
-  def preencher_e_verificar_ingresso
     fill_in 'Tipo', :with => "VIP"
     fill_in 'Valor', :with => "R$ 60"
-    select "Saturday Night", from: 'Evento'
-    select "Thais", from: 'Cliente'
-    
-    click_button 'Salvar'
-    
-    expect(page).to have_content 'Nome: VIP'
+    select dados[:cliente], from: "Cliente"
+    select dados[:evento], from: "Evento"
+
+  end
+
+  def verificar(dados)
+    expect(page).to have_content 'Tipo: VIP'
     expect(page).to have_content 'Valor: R$ 60'
+    expect(page).to have_content 'Cliente: #{dados[:cliente]}'
+    expect(page).to have_content 'Evento: #{dados[:evento]}'
+
   end
 
-  def preencher_e_verificar_evento
-    fill_in 'Descricao', :with => "Saturday Night"
-    fill_in 'Data', :with => "30-04-2016"
-    fill_in 'Horario', :with => "23:00"
-    select "Barra Music", from: 'Estabelecimento'
-
-    click_button 'Salvar'
-
-    expect(page).to have_content 'Descricao: Saturday Night'
-    expect(page).to have_content 'Data: 30-04-2016'
-    expect(page).to have_content 'Horario: 23:00'
-    expect(page).to have_content 'Local: Barra Music'
-  end
-
-  def preencher_e_verificar_cliente
-    fill_in 'Nome', :with => "Thais"
-      fill_in 'Cpf', :with => "104.475.347-18"
-      fill_in 'Nacionalidade', :with => "Brasileira"
-      fill_in 'Dtnasc', :with => "27-07-94"
-      fill_in 'Cep', :with => "28.013-022"
-      fill_in 'Endereco', :with => "Rua Saldanha Marinho"
-      fill_in 'Cidade', :with => "Campos dos Goytacazes"
-      fill_in 'Estado', :with => "Rio de Janeiro"
-      fill_in 'Celular', :with => "(22)9 9922-3905"
-      fill_in 'Email', :with => "tlnloopes@gmail.com"
-      fill_in 'Senha', :with => "123456"
-
-      click_button 'Salvar'
-
-      expect(page).to have_content 'Nome: Thais'
-      expect(page).to have_content 'Cpf: 104.475.347-18'
-      expect(page).to have_content 'Nacionalidade: Brasileira'
-      expect(page).to have_content 'Dtnasc: 27-07-94'
-      expect(page).to have_content 'Cep: 28.013-022'
-      expect(page).to have_content 'Endereco: Rua Saldanha Marinho'
-      expect(page).to have_content 'Cidade: Campos dos Goytacazes'
-      expect(page).to have_content 'Estado: Rio de Janeiro'
-      expect(page).to have_content 'Celular: (22)9 9922-3905'
-      expect(page).to have_content 'Email: tlnloopes@gmail.com'
-      expect(page).to have_content 'Senha: 123456'
-  end
-  
 end
