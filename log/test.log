@@ -25521,3 +25521,49 @@ Completed 500 Internal Server Error in 1555ms (ActiveRecord: 0.4ms)
   [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
   [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (111.0ms)[0m  DELETE FROM "avaliacoes";
+  [1m[36m (0.4ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  DELETE FROM sqlite_sequence where name = 'avaliacoes';
+  [1m[36m (98.0ms)[0m  [1mDELETE FROM "clientes";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'clientes';[0m
+  [1m[35m (87.0ms)[0m  DELETE FROM "estabelecimentos";
+  [1m[36m (0.4ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  DELETE FROM sqlite_sequence where name = 'estabelecimentos';
+  [1m[36m (97.7ms)[0m  [1mDELETE FROM "eventos";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'eventos';[0m
+  [1m[35m (105.6ms)[0m  DELETE FROM "ingressos";
+  [1m[36m (0.5ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  DELETE FROM sqlite_sequence where name = 'ingressos';
+  [1m[36m (109.1ms)[0m  [1mDELETE FROM "reservas";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'reservas';[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "clientes" ("Nome", "CPF", "Nacionalidade", "DataNascimento", "CEP", "Endereço", "Bairro", "Cidade", "Estado", "Celular", "Email", "Senha", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["Nome", "Thais"], ["CPF", "MyString"], ["Nacionalidade", "MyString"], ["DataNascimento", "MyString"], ["CEP", "MyString"], ["Endereço", "MyString"], ["Bairro", "MyString"], ["Cidade", "MyString"], ["Estado", "MyString"], ["Celular", "MyString"], ["Email", "MyString"], ["Senha", "MyString"], ["created_at", "2016-05-17 00:08:41.345685"], ["updated_at", "2016-05-17 00:08:41.345685"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clientes" ("Nome", "CPF", "Nacionalidade", "DataNascimento", "CEP", "Endereço", "Bairro", "Cidade", "Estado", "Celular", "Email", "Senha", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["Nome", "Thais"], ["CPF", "MyString"], ["Nacionalidade", "MyString"], ["DataNascimento", "MyString"], ["CEP", "MyString"], ["Endereço", "MyString"], ["Bairro", "MyString"], ["Cidade", "MyString"], ["Estado", "MyString"], ["Celular", "MyString"], ["Email", "MyString"], ["Senha", "MyString"], ["created_at", "2016-05-17 00:08:41.420571"], ["updated_at", "2016-05-17 00:08:41.420571"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "clientes" ("Nome", "CPF", "Nacionalidade", "DataNascimento", "CEP", "Endereço", "Bairro", "Cidade", "Estado", "Celular", "Email", "Senha", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["Nome", "Thais"], ["CPF", "MyString"], ["Nacionalidade", "MyString"], ["DataNascimento", "MyString"], ["CEP", "MyString"], ["Endereço", "MyString"], ["Bairro", "MyString"], ["Cidade", "MyString"], ["Estado", "MyString"], ["Celular", "MyString"], ["Email", "MyString"], ["Senha", "MyString"], ["created_at", "2016-05-17 00:08:41.434428"], ["updated_at", "2016-05-17 00:08:41.434428"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
