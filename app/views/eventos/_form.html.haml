@@ -5,7 +5,7 @@
     = f.input :Descrição
     = f.input :Data
     = f.input :Horário
-    = f.association :estabelecimento
+    = f.association :Estabelecimento, label_method: :Empresa
 
   .form-actions
     = f.submit "Salvar"

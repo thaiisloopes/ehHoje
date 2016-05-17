@@ -3,8 +3,8 @@ class CreateReservas < ActiveRecord::Migration
     create_table :reservas do |t|
       t.string :Data
       t.string :Hora
-      t.references :cliente, index: true, foreign_key: true
-      t.references :evento, index: true, foreign_key: true
+      t.references :Cliente, index: true, foreign_key: true
+      t.references :Evento, index: true, foreign_key: true
 
       t.timestamps null: false
     end

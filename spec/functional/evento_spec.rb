@@ -40,7 +40,7 @@ feature 'gerenciar Evento' do
 
   scenario 'excluir evento' do #, :js => true  do
 
-    evento = FactoryGirl.create(:evento, estabelecimento: @estabelecimento)
+    evento = FactoryGirl.create(:evento, Estabelecimento: @estabelecimento)
     visit eventos_path
 
     click_link 'Excluir'
@@ -67,3 +67,4 @@ feature 'gerenciar Evento' do
   end
 
 end
++

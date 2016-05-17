@@ -5,8 +5,8 @@ require 'spec_helper'
 feature 'gerenciar Ingresso' do
 
   before(:each) do
-    @cliente = create(:Cliente, nome: "Thais")
-    @evento = create(:Evento, nome: "Saturday Night")
+    @cliente = create(:cliente, Nome: "Thais")
+    @evento = create(:evento, Nome: "Saturday Night")
   end
 
 

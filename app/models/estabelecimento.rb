@@ -1,3 +1,3 @@
 class Estabelecimento < ActiveRecord::Base
-	has_many :eventos
+	has_many :Eventos
 end

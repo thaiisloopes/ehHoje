@@ -3,8 +3,8 @@ class CreateIngressos < ActiveRecord::Migration
     create_table :ingressos do |t|
       t.string :Tipo
       t.string :Valor
-      t.references :evento, index: true, foreign_key: true
-      t.references :cliente, index: true, foreign_key: true
+      t.references :Evento, index: true, foreign_key: true
+      t.references :Cliente, index: true, foreign_key: true
 
       t.timestamps null: false
     end

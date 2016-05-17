@@ -1,4 +1,4 @@
 class Avaliacao < ActiveRecord::Base
-  belongs_to :cliente
-  belongs_to :evento
+  belongs_to :Cliente
+  belongs_to :Evento
 end

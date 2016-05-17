@@ -4,8 +4,8 @@
   .form-inputs
     = f.input :Tipo
     = f.input :Valor
-    = f.association :evento
-    = f.association :cliente
+    = f.association :Evento, label_method: :Descrição
+    = f.association :Cliente
 
   .form-actions
     = f.submit "Salvar"
